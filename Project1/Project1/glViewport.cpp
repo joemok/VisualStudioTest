@@ -79,7 +79,7 @@ void init()
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	//定义剪裁面
-	gluOrtho2D(-1.0, 1.0, -1.0, 1.0);
+	gluOrtho2D(-1.0, 2.0, -1.0, 2.0);
 
 	//glViewport( 0, 0, 200, 200 ); //放在这里不好使
 }

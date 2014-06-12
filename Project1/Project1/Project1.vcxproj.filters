@@ -18,7 +18,7 @@
     <ClCompile Include="HelloWorld.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="glViewport.cpp">
+    <ClCompile Include="resizewindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
