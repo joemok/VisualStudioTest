@@ -4,8 +4,6 @@
 #include<GL\GLU.h>
 #include<GL\glut.h>
 
-
-
 //int main()
 //{
 //	std::cout << "Hello, World!\n" << "This is Master's Branch" << std::endl;
