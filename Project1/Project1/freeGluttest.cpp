@@ -70,9 +70,9 @@ void display()
 
 	glEnd();
 
-	xrot += 0.02f;
-	yrot += 0.01f;
-	zrot += 0.03f;
+	xrot += 0.2f;
+	yrot += 0.1f;
+	zrot += 0.3f;
 
 	glutSwapBuffers();
 }
