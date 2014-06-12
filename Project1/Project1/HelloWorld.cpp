@@ -2,7 +2,7 @@
 
 int main()
 {
-	std::cout << "Hello, World!\n" << "This is Joe's Branch" << std::endl;
+	std::cout << "Hello, World!\n" << "This is Master's Branch" << std::endl;
 	std::cin.get();
 	return 0;
 }
