@@ -1,8 +1,8 @@
 #include<iostream>
+#include"TestClass.h"
 
 int main()
 {
-	std::cout << "Hello, World!\n" << "This is Joe's Branch" << std::endl;
-	std::cin.get();
+	TestClass T;
 	return 0;
 }
