@@ -4,11 +4,11 @@
 
 int main(int argc, char** argv)
 {
-	Window W(800, 600, "Hello World");
+	Window W(800, 600, "Window");
 
 	while (!W.isClosed()){
-		glClearColor(0.0f, 0.15f, 0.3f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
+		
+		W.Clear(0.0f, 0.15f, 0.3f, 1.0f);
 
 		W.swapBuffers();
 	}

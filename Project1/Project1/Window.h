@@ -9,6 +9,7 @@ public:
 	Window(int width, int height, const std::string& title);
 	~Window();
 	
+	void Clear(float r, float g, float b, float a);
 	void swapBuffers();
 	bool isClosed();
 

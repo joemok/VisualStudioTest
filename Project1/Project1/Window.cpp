@@ -37,6 +37,11 @@ Window::~Window()
 	SDL_Quit();
 }
 
+void Window::Clear(float r, float g, float b, float a){
+	glClearColor(r, g, b, a);
+	glClear(GL_COLOR_BUFFER_BIT);
+}
+
 bool Window::isClosed(){
 	return m_isClosed;
 }
