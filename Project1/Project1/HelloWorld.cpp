@@ -1,8 +1,10 @@
-#include<iostream>
-#include"TestClass.h"
+#include <iostream>
+#include "TestClass.h"
+#include "Window.h"
 
-//int main()
-//{
-//	TestClass T;
-//	return 0;
-//}
+int main()
+{
+	Window W(800, 600, "Hello World");
+	std::cin.get;
+	return 0;
+}
