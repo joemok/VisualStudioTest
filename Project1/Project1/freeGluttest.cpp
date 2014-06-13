@@ -1,7 +1,6 @@
 #include <GL/glew.h>
 #include <GL/freeglut.h>
 #include <GL/glu.h>
-
 #include <iostream>
 
 GLfloat xrot, yrot, zrot;
