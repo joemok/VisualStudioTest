@@ -8,7 +8,7 @@ int main(int argc, char** argv)
 
 	while (!W.isClosed()){
 		
-		W.Clear(0.0f, 0.15f, 0.3f, 1.0f);
+		W.Clear(1.0f, 0.15f, 0.3f, 1.0f);
 
 		W.swapBuffers();
 	}
