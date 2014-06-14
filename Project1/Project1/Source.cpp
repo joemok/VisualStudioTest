@@ -7,14 +7,14 @@
 //GLfloat xrot, yrot, zrot;
 //
 //void resize(int width, int height)
-//{
+//{/*
 //	glViewport(0, 0, width, height);
 //
 //	glMatrixMode(GL_PROJECTION);
 //	glLoadIdentity();
 //	gluPerspective(60.0f, (GLfloat)width / (GLfloat)height, 1.0f, 1000.0f);
 //
-//	glMatrixMode(GL_MODELVIEW);
+//	glMatrixMode(GL_MODELVIEW);*/
 //	glLoadIdentity();
 //
 //	glEnable(GL_DEPTH_TEST);

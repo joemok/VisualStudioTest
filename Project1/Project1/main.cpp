@@ -6,7 +6,7 @@
 int main(int argc, char** argv)
 {
 	Window W(800, 600, "Window");
-
+	
 	while (!W.isClosed()){
 		
 		W.Clear(1.0f, 0.15f, 0.3f, 1.0f);
