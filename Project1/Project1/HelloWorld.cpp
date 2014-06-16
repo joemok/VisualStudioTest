@@ -1,5 +1,3 @@
-#include<iostream>
-
 #include "Display.h"
 
 int main()
