@@ -81,19 +81,9 @@
   <ItemGroup>
     <ClCompile Include="..\Project1\main.cpp" />
     <ClCompile Include="..\Project1\Window.cpp" />
-    <ClCompile Include="mesh.cpp" />
-    <ClCompile Include="shader.cpp" />
-    <ClCompile Include="obj_loader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Project1\Window.h" />
-    <ClInclude Include="camera.h" />
-    <ClInclude Include="debugTimer.h" />
-    <ClInclude Include="mesh.h" />
-    <ClInclude Include="obj_loader.h" />
-    <ClInclude Include="transform.h" />
-    <ClInclude Include="shader.h" />
-    <ClInclude Include="util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
