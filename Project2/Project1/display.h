@@ -1,6 +1,7 @@
 #pragma once
-//#include <SDL\SDL.h>
+#include <iostream>
 #include <string>
+#include <SDL\SDL.h>
 
 class Display
 {
@@ -12,8 +13,8 @@ public:
 
 private:
 
-	//SDL_Window* m_window;
-	//SDL_GLContext m_glContext;
+	SDL_Window* m_window;
+	SDL_GLContext m_glContext;
 	bool m_isClosed;
 };
 
