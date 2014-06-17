@@ -2,11 +2,7 @@
 #include <SDL/SDL.h>
 #include <iostream>
 #include "Window.h"
-#include "mesh.h"
-#include "shader.h"
-#include "texture.h"
-#include "transform.h"
-#include "camera.h"
+
 
 int main(int argc, char** argv)
 {
