@@ -2,7 +2,7 @@
 #include <SDL/SDL.h>
 #include <iostream>
 #include "Window.h"
-#include "mesh.h"
+#include "Mesh.h"
 
 
 int main(int argc, char** argv)

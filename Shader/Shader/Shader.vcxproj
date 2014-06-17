@@ -77,15 +77,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Project1\Project1\Window.h" />
+    <ClInclude Include="Display.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Shader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Project1\Project1\main.cpp" />
-    <ClCompile Include="..\..\Project1\Project1\Window.cpp" />
+    <ClCompile Include="Display.cpp" />
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
