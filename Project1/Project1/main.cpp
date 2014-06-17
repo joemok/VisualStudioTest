@@ -2,11 +2,13 @@
 #include <SDL/SDL.h>
 #include <iostream>
 #include "Window.h"
+#include "mesh.h"
 
 
 int main(int argc, char** argv)
 {
 	Window W(800, 600, "Window");
+
 
 	while (!W.isClosed()){
 		
