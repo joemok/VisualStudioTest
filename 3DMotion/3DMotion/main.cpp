@@ -5,6 +5,7 @@
 #include "Shader.h"
 #include "Mesh.h"
 #include "Texture.h"
+#include "Transform.h"
  
 int main(int argc, char** argv)
 {
@@ -17,16 +18,29 @@ int main(int argc, char** argv)
 	Mesh mesh(vertices, sizeof(vertices) / sizeof(vertices[0]));
 	Shader shader("./res/basicShader");
 	Texture texture("./res/bricks.jpg");
+	Transform transform;
+
+	float counter = 0.0f;
 
 	while (!W.isClosed()){
 
 		W.Clear(0.0f, 0.3f, 0.7f, 1.0f);
 
+		float sinCounter = sinf(counter);
+		float cosCounter = cosf(counter);
+
+		transform.GetPos().x = sinf(counter);
+		transform.GetPos().y = sinf(counter);
+		transform.GetRot().z = counter * 100;
+		transform.SetScale(glm::vec3(cosCounter, cosCounter, cosCounter));
+
 		shader.Bind();
 		texture.Bind(0);
+		shader.Update(transform);
 		mesh.Draw();
 
 		W.swapBuffers();
+		counter += 0.001f;
 	}
 
 	std::cin.get();

@@ -11,7 +11,7 @@ static const int DISPLAY_WIDTH = 800;
 static const int DISPLAY_HEIGHT = 600;
 
 int main(int argc, char** argv)
-{
+{ 
 	Display display(DISPLAY_WIDTH, DISPLAY_HEIGHT, "OpenGL");
 
 	Vertex vertices[] =
@@ -89,9 +89,9 @@ int main(int argc, char** argv)
 		float sinCounter = sinf(counter);
 		float absSinCounter = abs(sinCounter);
 
-		//transform.GetPos()->x = sinCounter;
+		transform.GetPos()->x = sinCounter;
 		transform.GetRot()->y = counter * 100;
-		//transform.GetRot()->z = counter * 100;
+		transform.GetRot()->z = counter * 100;
 		//transform.GetScale()->x = absSinCounter;
 		//transform.GetScale()->y = absSinCounter;
 
@@ -103,7 +103,7 @@ int main(int argc, char** argv)
 
 		display.SwapBuffers();
 		SDL_Delay(1);
-		counter += 0.01f;
+		counter += 0.001f;
 	}
 
 	return 0;
