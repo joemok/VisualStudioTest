@@ -2,8 +2,6 @@
 #include <iostream>
 #include <fstream>
 
-
-
 Shader::Shader(const std::string& fileName)
 {
 	m_program = glCreateProgram();
@@ -40,14 +38,12 @@ void Shader::Bind()
 	glUseProgram(m_program);
 }
 
-GLuint Shader::CreateShader(const std::string& text, unsigned int type)
+GLuint Shader::CreateShader(const std::string& text, GLenum shaderType)
 {
-	GLuint shader = glCreateShader(type);
+	GLuint shader = glCreateShader(shaderType);
 
 	if (shader == 0)
-	{
-		std::cerr << "Error: shader creation failed" << std::endl;
-	}
+		std::cerr << "Error compiling shader type " << std::endl;
 
 	const GLchar* shaderSourceStrings[1];
 	GLint shaderSourceStringLengths[1];
@@ -58,10 +54,9 @@ GLuint Shader::CreateShader(const std::string& text, unsigned int type)
 	glShaderSource(shader, 1, shaderSourceStrings, shaderSourceStringLengths);
 	glCompileShader(shader);
 
-	CheckShaderError(shader, GL_COMPILE_STATUS, false, "Error: shader compilation failed ");
+	CheckShaderError(shader, GL_COMPILE_STATUS, false, "Error compiling shader!");
 
 	return shader;
-
 }
 
 std::string Shader::LoadShader(const std::string& fileName)

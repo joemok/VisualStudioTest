@@ -1,7 +1,6 @@
 #pragma once
 #include <glm\glm.hpp>
 
-
 class Vertex
 {
 public:
@@ -12,6 +11,5 @@ public:
 	virtual ~Vertex() {}
 private:
 	glm::vec3 pos;
-
 };
 

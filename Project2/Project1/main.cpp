@@ -15,8 +15,8 @@ int main(int argc, char** argv)
 							Vertex(glm::vec3(1.0f, -1.0f, 0.0f)) };
 
 	Mesh mesh(verticies, sizeof(verticies) / sizeof(verticies[0]));
-
 	Shader shader("./res/basicShader");
+
 	while (!display.isClosed()){
 
 		display.Clear(0.0f, 0.0f, 0.3f, 0.5f);
