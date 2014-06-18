@@ -1,7 +1,7 @@
 #version 120
 
 attribute vec3 position;
-attribute vec3 texCoord;
+attribute vec2 texCoord;
 
 varying vec2 texCoord0;
 

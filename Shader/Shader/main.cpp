@@ -19,6 +19,7 @@ int main(int argc, char** argv)
 	while (!W.isClosed()){
 
 		W.Clear(0.0f, 0.5f, 0.3f, 0.5f);
+
 		shader.Bind();
 		mesh.Draw();
 
