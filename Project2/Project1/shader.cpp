@@ -1,33 +1,30 @@
 #include "shader.h"
-#include <iostream>
 #include <fstream>
+#include <iostream>
+
 
 Shader::Shader(const std::string& fileName)
 {
 	m_program = glCreateProgram();
-	m_shaders[0] = CreateShader(LoadShader(fileName) + ".vert", GL_VERTEX_SHADER);
-	m_shaders[1] = CreateShader(LoadShader(fileName) + ".frag", GL_FRAGMENT_SHADER);
+	m_shaders[0] = CreateShader(LoadShader(fileName + ".vs"), GL_VERTEX_SHADER);
+	m_shaders[1] = CreateShader(LoadShader(fileName + ".fs"), GL_FRAGMENT_SHADER);
 
-	for (unsigned int ii = 0; ii < NUM_SHADERS; ii++)
-	{
-		glAttachShader(m_program, m_shaders[ii]);
-	}
-
-	glBindAttribLocation(m_program, 0, "position");
+	for (unsigned int i = 0; i < NUM_SHADERS; i++)
+		glAttachShader(m_program, m_shaders[i]);
 
 	glLinkProgram(m_program);
-	CheckShaderError(m_program, GL_LINK_STATUS, true, "Error: Program linking failed ");
+	CheckShaderError(m_program, GL_LINK_STATUS, true, "Error linking shader program");
 
-	glLinkProgram(m_program);
-	CheckShaderError(m_program, GL_VALIDATE_STATUS, true, "Error: Program is invalid ");
+	glValidateProgram(m_program);
+	CheckShaderError(m_program, GL_LINK_STATUS, true, "Invalid shader program");
 }
 
 Shader::~Shader()
 {
-	for (unsigned int ii = 0; ii < NUM_SHADERS; ii++)
+	for (unsigned int i = 0; i < NUM_SHADERS; i++)
 	{
-		glDetachShader(m_program, m_shaders[ii]);
-		glDeleteShader(m_shaders[ii]);
+		glDetachShader(m_program, m_shaders[i]);
+		glDeleteShader(m_shaders[i]);
 	}
 
 	glDeleteProgram(m_program);
@@ -38,26 +35,6 @@ void Shader::Bind()
 	glUseProgram(m_program);
 }
 
-GLuint Shader::CreateShader(const std::string& text, GLenum shaderType)
-{
-	GLuint shader = glCreateShader(shaderType);
-
-	if (shader == 0)
-		std::cerr << "Error compiling shader type " << std::endl;
-
-	const GLchar* shaderSourceStrings[1];
-	GLint shaderSourceStringLengths[1];
-
-	shaderSourceStrings[0] = text.c_str();
-	shaderSourceStringLengths[0] = text.length();
-
-	glShaderSource(shader, 1, shaderSourceStrings, shaderSourceStringLengths);
-	glCompileShader(shader);
-
-	CheckShaderError(shader, GL_COMPILE_STATUS, false, "Error compiling shader!");
-
-	return shader;
-}
 
 std::string Shader::LoadShader(const std::string& fileName)
 {
@@ -102,4 +79,25 @@ void Shader::CheckShaderError(GLuint shader, GLuint flag, bool isProgram, const 
 
 		std::cerr << errorMessage << ": '" << error << "'" << std::endl;
 	}
+}
+
+GLuint Shader::CreateShader(const std::string& text, GLenum shaderType)
+{
+	GLuint shader = glCreateShader(shaderType);
+
+	if (shader == 0)
+		std::cerr << "Error compiling shader type " << std::endl;
+
+	const GLchar* shaderSourceStrings[1];
+	GLint shaderSourceStringLengths[1];
+
+	shaderSourceStrings[0] = text.c_str();
+	shaderSourceStringLengths[0] = text.length();
+
+	glShaderSource(shader, 1, shaderSourceStrings, shaderSourceStringLengths);
+	glCompileShader(shader);
+
+	CheckShaderError(shader, GL_COMPILE_STATUS, false, "Error compiling shader!");
+
+	return shader;
 }
