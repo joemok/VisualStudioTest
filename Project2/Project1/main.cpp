@@ -3,17 +3,25 @@
 #include <iostream>
 #include "display.h"
 #include "shader.h"
+#include "mesh.h"
 
 
 int main(int argc, char** argv)
 {
 	Display display(800, 600, "Window");
 
+	Vertex verticies[] = {	Vertex(glm::vec3(-0.5, -0.5, 0)),
+							Vertex(glm::vec3(0, 0.5, 0)),
+							Vertex(glm::vec3(0.5, -0.5, 0)) };
+
+	Mesh mesh(verticies, sizeof(verticies) / sizeof(verticies[0]));
+
 	Shader shader("./res/basicShader");
 	while (!display.isClosed()){
 
-		display.Clear(0.0f, 1.0f, 0.3f, 0.5f);
+		display.Clear(0.0f, 0.0f, 0.3f, 0.5f);
 		shader.Bind();
+		mesh.Draw();
 		display.swapBuffers();
 	}
 
