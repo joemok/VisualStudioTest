@@ -1,6 +1,7 @@
 #include "shader.h"
-#include <iostream>
 #include <fstream>
+#include <iostream>
+
 
 Shader::Shader(const std::string& fileName)
 {
@@ -80,19 +81,20 @@ void Shader::CheckShaderError(GLuint shader, GLuint flag, bool isProgram, const 
 	}
 }
 
-GLuint Shader::CreateShader(const std::string& text, unsigned int type)
+GLuint Shader::CreateShader(const std::string& text, GLenum shaderType)
 {
-	GLuint shader = glCreateShader(type);
+	GLuint shader = glCreateShader(shaderType);
 
 	if (shader == 0)
-		std::cerr << "Error compiling shader type " << type << std::endl;
+		std::cerr << "Error compiling shader type " << std::endl;
 
-	const GLchar* p[1];
-	p[0] = text.c_str();
-	GLint lengths[1];
-	lengths[0] = text.length();
+	const GLchar* shaderSourceStrings[1];
+	GLint shaderSourceStringLengths[1];
 
-	glShaderSource(shader, 1, p, lengths);
+	shaderSourceStrings[0] = text.c_str();
+	shaderSourceStringLengths[0] = text.length();
+
+	glShaderSource(shader, 1, shaderSourceStrings, shaderSourceStringLengths);
 	glCompileShader(shader);
 
 	CheckShaderError(shader, GL_COMPILE_STATUS, false, "Error compiling shader!");
