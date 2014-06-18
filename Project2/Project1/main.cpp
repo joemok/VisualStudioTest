@@ -10,9 +10,9 @@ int main(int argc, char** argv)
 {
 	Display display(800, 600, "Window");
 
-	Vertex verticies[] = {	Vertex(glm::vec3(-0.5, -0.5, 0)),
-							Vertex(glm::vec3(0, 0.5, 0)),
-							Vertex(glm::vec3(0.5, -0.5, 0)) };
+	Vertex verticies[] = {	Vertex(glm::vec3(-1.0f, -1.0f, 0.0f)),
+							Vertex(glm::vec3(0.0f, 1.0f, 0.0f)),
+							Vertex(glm::vec3(1.0f, -1.0f, 0.0f)) };
 
 	Mesh mesh(verticies, sizeof(verticies) / sizeof(verticies[0]));
 
@@ -25,6 +25,6 @@ int main(int argc, char** argv)
 		display.swapBuffers();
 	}
 
-	std::cin.get();
+	system("pause");
 	return 0;
 }
