@@ -1,7 +1,7 @@
 #include <GL/glew.h>
 #include <SDL/SDL.h>
 #include <iostream>
-#include "Window.h"
+#include "Disp.h"
 
 
 int main(int argc, char** argv)
@@ -10,7 +10,7 @@ int main(int argc, char** argv)
 
 
 	while (!W.isClosed()){
-		
+
 		W.Clear(0.0f, 1.0f, 0.3f, 0.5f);
 
 		W.swapBuffers();

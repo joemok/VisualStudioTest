@@ -79,35 +79,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\ModernOpenGLTutorial-master\display.cpp" />
-    <ClCompile Include="..\..\..\..\ModernOpenGLTutorial-master\main.cpp" />
-    <ClCompile Include="..\..\..\..\ModernOpenGLTutorial-master\mesh.cpp" />
-    <ClCompile Include="..\..\..\..\ModernOpenGLTutorial-master\shader.cpp" />
-    <ClCompile Include="..\..\..\..\ModernOpenGLTutorial-master\texture.cpp" />
-    <ClCompile Include="..\Project1\Window.cpp" />
+    <ClCompile Include="Disp.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\ModernOpenGLTutorial-master\camera.h" />
-    <ClInclude Include="..\..\..\..\ModernOpenGLTutorial-master\display.h" />
-    <ClInclude Include="..\..\..\..\ModernOpenGLTutorial-master\math3d.h" />
-    <ClInclude Include="..\..\..\..\ModernOpenGLTutorial-master\mesh.h" />
-    <ClInclude Include="..\..\..\..\ModernOpenGLTutorial-master\obj_loader.h" />
-    <ClInclude Include="..\..\..\..\ModernOpenGLTutorial-master\shader.h" />
-    <ClInclude Include="..\..\..\..\ModernOpenGLTutorial-master\stb_image.h" />
-    <ClInclude Include="..\..\..\..\ModernOpenGLTutorial-master\texture.h" />
-    <ClInclude Include="..\..\..\..\ModernOpenGLTutorial-master\transform.h" />
-    <ClInclude Include="..\..\..\..\ModernOpenGLTutorial-master\util.h" />
-    <ClInclude Include="..\Project1\Window.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\..\ModernOpenGLTutorial-master\res\basicShader.fs" />
-    <None Include="..\..\..\..\ModernOpenGLTutorial-master\res\basicShader.vs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\..\..\..\ModernOpenGLTutorial-master\res\bricks.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Object Include="..\..\..\..\ModernOpenGLTutorial-master\res\monkey3.obj" />
+    <ClInclude Include="Disp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
