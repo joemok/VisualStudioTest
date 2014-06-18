@@ -25,6 +25,5 @@ int main(int argc, char** argv)
 		display.swapBuffers();
 	}
 
-	system("pause");
 	return 0;
 }

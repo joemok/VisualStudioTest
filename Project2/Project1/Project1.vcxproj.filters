@@ -27,9 +27,6 @@
     <ClCompile Include="mesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="vertex.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="display.h">
@@ -41,15 +38,12 @@
     <ClInclude Include="mesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="vertex.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="basicShader.frag">
+    <None Include="res\basicShader.frag">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="basicShader.vert">
+    <None Include="res\basicShader.vert">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

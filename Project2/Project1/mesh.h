@@ -1,13 +1,24 @@
 #pragma once
 #include <glm\glm.hpp>
 #include <GL\glew.h>
-#include "vertex.h"
+
+class Vertex
+{
+public:
+	Vertex(const glm::vec3 pos)
+	{
+		this->pos = pos;
+	}
+	virtual ~Vertex() {}
+private:
+	glm::vec3 pos;
+};
 
 class Mesh
 {
 public:
 
-	Mesh(Vertex* verticies, unsigned int numVerticies);
+	Mesh(Vertex* vertices, unsigned int numVertices);
 	virtual ~Mesh();
 	void Draw();
 private:
