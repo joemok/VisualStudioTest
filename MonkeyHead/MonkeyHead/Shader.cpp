@@ -48,8 +48,8 @@ GLuint Shader::CreateShader(const std::string& text, GLenum shaderType)
 	const GLchar* shaderSourceStrings[1];
 	GLint shaderSourceStringLengths[1];
 
-	shaderSourceStringLengths[0] = text.length();
 	shaderSourceStrings[0] = text.c_str(); // conver a regular string to a list of c chars
+	shaderSourceStringLengths[0] = text.length();
 
 	glShaderSource(shader, 1, shaderSourceStrings, shaderSourceStringLengths);
 	glCompileShader(shader);

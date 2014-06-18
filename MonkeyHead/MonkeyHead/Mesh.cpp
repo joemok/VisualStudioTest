@@ -14,8 +14,8 @@ Mesh::Mesh(Vertex* vertices, unsigned int numVertices)
 	positions.reserve(numVertices);
 	texCoords.reserve(numVertices);
 
-	for (unsigned int i = 0; i < numVertices; i++)
-	{
+	for (unsigned int i = 0; i < numVertices; i++){
+
 		positions.push_back(*vertices[i].GetPos());
 		texCoords.push_back(*vertices[i].GetTexCoord());
 	}
@@ -28,7 +28,7 @@ Mesh::Mesh(Vertex* vertices, unsigned int numVertices)
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
 
 
-	glGenBuffers(NUM_BUFFERS, m_vertexArrayBuffers); //m_vertexArrayBuffers is already a pointer, so not use &
+	//glGenBuffers(NUM_BUFFERS, m_vertexArrayBuffers); //m_vertexArrayBuffers is already a pointer, so not use &
 	glBindBuffer(GL_ARRAY_BUFFER, m_vertexArrayBuffers[TEXCOORD_VB]);// make it thinks that this block of data is an array
 	glBufferData(GL_ARRAY_BUFFER, numVertices * sizeof(texCoords[0]), &texCoords[0], GL_STATIC_DRAW);// put all vertices data in this array
 
@@ -42,6 +42,7 @@ Mesh::Mesh(Vertex* vertices, unsigned int numVertices)
 
 Mesh::~Mesh()
 {
+	glDeleteBuffers(NUM_BUFFERS, m_vertexArrayBuffers);
 	glDeleteVertexArrays(1, &m_vertexArrayObject);
 }
 
