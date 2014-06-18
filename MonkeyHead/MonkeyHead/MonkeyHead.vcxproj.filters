@@ -57,7 +57,11 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\basicShader.fs" />
-    <None Include="res\basicShader.vs" />
+    <None Include="res\basicShader.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\basicShader.vs">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
