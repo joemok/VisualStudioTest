@@ -32,8 +32,15 @@ int main(int argc, char** argv)
 		display.Clear(0.8f, 0.4f, 0.4f, 0.8f);
 
 		
+		float sinCounter = sinf(counter);
+		float absSinCounter = abs(sinCounter);
 
-		transform.GetPos().x = sinf(counter);
+		transform.GetPos().x = sinCounter;
+		transform.GetRot().y = counter * 100;
+		transform.GetRot().z = counter * 100;
+		//transform.GetScale().x = absSinCounter;
+		//transform.GetScale().y = absSinCounter;
+		transform.SetScale(glm::vec3(sinCounter, sinCounter, sinCounter));
 
 		shader.Bind();
 		shader.Update(transform);
@@ -41,7 +48,7 @@ int main(int argc, char** argv)
 		mesh.Draw();
 
 		display.swapBuffers();
-		counter += 0.1f;
+		counter += 0.001f;
 	}
 
 	std::cin.get();

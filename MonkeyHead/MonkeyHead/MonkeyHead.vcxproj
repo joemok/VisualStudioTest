@@ -14,6 +14,7 @@
     <ProjectGuid>{D3E60AFF-25E5-4C56-B61B-76BCBB74B865}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>MonkeyHead</RootNamespace>
+    <ProjectName>MonkeyHead[transform]</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
