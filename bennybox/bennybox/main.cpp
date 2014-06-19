@@ -26,7 +26,7 @@ int main(int argc, char** argv)
 
 	Shader shader("./res/basicShader");
 	Texture texture("./res/Luigi.jpg");
-	Camera camera(glm::vec3(0, 0, -2), 70.0f, (float)WIDTH / (float)HEIGHT, 0.01f, 1000.0f);
+	Camera camera(glm::vec3(0, 0, -10), 70.0f, (float)WIDTH / (float)HEIGHT, 0.01f, 1000.0f);
 	Transform transform;
 
 	float counter = 0.0f;
@@ -54,6 +54,5 @@ int main(int argc, char** argv)
 		counter += 0.01f;
 	}
 
-	std::cin.get();
 	return 0;
 }
