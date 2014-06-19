@@ -13,13 +13,17 @@
  
 int main(int argc, char** argv)
 {
-	Display W(WIDTH, HEIGHT, "Window");
+	Display display(WIDTH, HEIGHT, "Window");
 
-	Vertex vertices[] = { Vertex(glm::vec3(-0.5, -0.5, 0.0), glm::vec2(0.0, 0.0)),
-						  Vertex(glm::vec3(0.0, 0.5, 0.0), glm::vec2(0.5, 1.0)),
-						  Vertex(glm::vec3(0.5, -0.5, 0.0), glm::vec2(1.0, 0.0)), };
+	Vertex vertices[] = { Vertex(glm::vec3(-0.5, -0.5, 0.0), glm::vec2(0.0, 1.0)),
+						  Vertex(glm::vec3(0.0, 0.5, 0.0), glm::vec2(0.5, 0.0)),
+						  Vertex(glm::vec3(0.5, -0.5, 0.0), glm::vec2(1.0, 1.0)), };
 
-	Mesh mesh(vertices, sizeof(vertices) / sizeof(vertices[0]));
+	unsigned int indices[] = { 0, 1, 2 };
+
+	Mesh triangle(vertices, sizeof(vertices) / sizeof(vertices[0]), indices, sizeof(indices) / sizeof(indices[0]));
+	Mesh monkey("./res/monkey3.obj");
+
 	Shader shader("./res/basicShader");
 	Texture texture("./res/Luigi.jpg");
 	Camera camera(glm::vec3(0, 0, -2), 70.0f, (float)WIDTH / (float)HEIGHT, 0.01f, 1000.0f);
@@ -27,9 +31,9 @@ int main(int argc, char** argv)
 
 	float counter = 0.0f;
 
-	while (!W.isClosed()){
+	while (!display.isClosed()){
 
-		W.Clear(0.0f, 0.3f, 0.7f, 1.0f);
+		display.Clear(0.0f, 0.3f, 0.7f, 1.0f);
 
 		float sinCounter = sinf(counter);
 		float cosCounter = cosf(counter);
@@ -44,9 +48,8 @@ int main(int argc, char** argv)
 		shader.Bind();
 		texture.Bind(0);
 		shader.Update(transform, camera);
-		mesh.Draw();
 
-		W.swapBuffers();
+		display.swapBuffers();
 		counter += 0.001f;
 	}
 
