@@ -36,6 +36,9 @@
   <ItemGroup>
     <Image Include="res\Luigi.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Object Include="res\monkey3.obj" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9D80100C-CD3A-4261-9FBF-A293CF54CCB5}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>

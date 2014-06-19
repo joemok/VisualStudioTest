@@ -48,6 +48,7 @@ int main(int argc, char** argv)
 		shader.Bind();
 		texture.Bind(0);
 		shader.Update(transform, camera);
+		monkey.Draw();
 
 		display.swapBuffers();
 		counter += 0.001f;
