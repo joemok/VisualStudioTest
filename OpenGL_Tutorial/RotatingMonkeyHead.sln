@@ -7,6 +7,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RotatingMonkeyHead", "OpenG
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3D245C3C-0667-4A78-B4B1-86CC91A1E9C5}"
 	ProjectSection(SolutionItems) = preProject
+		OpenGL_Tutorial\res\airboat.obj = OpenGL_Tutorial\res\airboat.obj
+		OpenGL_Tutorial\res\lamp.obj = OpenGL_Tutorial\res\lamp.obj
+		OpenGL_Tutorial\res\mario_obj.obj = OpenGL_Tutorial\res\mario_obj.obj
 		OpenGL_Tutorial\res\monkey3.obj = OpenGL_Tutorial\res\monkey3.obj
 	EndProjectSection
 EndProject
