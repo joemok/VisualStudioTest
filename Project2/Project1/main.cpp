@@ -6,6 +6,10 @@
 #include "mesh.h"
 #include "texture.h"
 #include "transform.h"
+#include "camera.h"
+
+#define WIDTH 800
+#define HEIGHT 600
 
 int main(int argc, char** argv)
 {
@@ -19,6 +23,7 @@ int main(int argc, char** argv)
 	Shader shader("./res/basicShader");
 	Texture texture("./res/TriForce.jpg");
 	Transform transform;
+	Camera camera(glm::vec3(0, 0, -3), 70.0f, float(WIDTH) / float(HEIGHT), 0.01f, 1000.0f);
 
 	float counter = 0.0f;
 
@@ -29,14 +34,16 @@ int main(int argc, char** argv)
 
 		display.Clear(0.0f, 0.0f, 0.3f, 0.5f);
 		shader.Bind();
-		shader.Update(transform);
+		shader.Update(transform, camera);
 		texture.Bind(0);
 		mesh.Draw();
 		display.swapBuffers();
 
 		transform.GetPos().x = sinCounter;
 		transform.GetRot().z = counter * 50;
-		transform.SetScale(glm::vec3(cosCounter,cosCounter,cosCounter));
+		transform.GetRot().y = counter * 50;
+		transform.GetRot().x = counter * 50;
+		//transform.SetScale(glm::vec3(cosCounter,cosCounter,cosCounter));
 		counter += 0.01f;
 	}
 
