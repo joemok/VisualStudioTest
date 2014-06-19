@@ -64,10 +64,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\basicShader.vs">
+    <None Include="res\basicShader.frag">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="res\basicShader.fs">
+    <None Include="res\basicShader.vert">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
@@ -75,10 +75,5 @@
     <Image Include="res\Luigi.jpg">
       <Filter>Resource Files</Filter>
     </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <Object Include="res\monkey3.obj">
-      <Filter>Resource Files</Filter>
-    </Object>
   </ItemGroup>
 </Project>

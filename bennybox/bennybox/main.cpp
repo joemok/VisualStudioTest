@@ -51,7 +51,7 @@ int main(int argc, char** argv)
 		monkey.Draw();
 
 		display.swapBuffers();
-		counter += 0.001f;
+		counter += 0.01f;
 	}
 
 	std::cin.get();
