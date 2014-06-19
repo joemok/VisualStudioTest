@@ -27,15 +27,15 @@ int main(int argc, char** argv)
 	Shader shader("./res/basicShader");
 	Texture texture("./res/bricks.jpg");
 	Transform transform;
-	Camera camera(glm::vec3(0, 0, -2), 70.0f, (float)DISPLAY_WIDTH / (float)DISPLAY_HEIGHT, 1.0f, 1000.0f);
+	Camera camera(glm::vec3(0, 0, -4), 70.0f, (float)DISPLAY_WIDTH / (float)DISPLAY_HEIGHT, 1.0f, 1000.0f);
 
 	float counter = 0.0f;
 
 
 	while (!display.isClosed()){
 
-		display.Clear(0.8f, 0.4f, 0.4f, 0.8f);
-
+		//display.Clear(0.8f, 0.4f, 0.4f, 0.8f);
+		display.Clear(0.0f, 0.0f, 0.0f, 0.8f);
 		
 		float sinCounter = sinf(counter);
 		float cosCounter = cosf(counter);
@@ -43,9 +43,9 @@ int main(int argc, char** argv)
 
 		transform.GetPos().x = sinCounter;
 		transform.GetPos().z = cosCounter;
-		transform.GetRot().x = counter * 100;
-		transform.GetRot().y = counter * 100;
-		transform.GetRot().z = counter * 100;
+		transform.GetRot().x = counter * 50;
+		transform.GetRot().y = counter * 50;
+		transform.GetRot().z = counter * 50;
 		//transform.GetScale().x = absSinCounter;
 		//transform.GetScale().y = absSinCounter;
 		//transform.SetScale(glm::vec3(sinCounter, sinCounter, sinCounter));
