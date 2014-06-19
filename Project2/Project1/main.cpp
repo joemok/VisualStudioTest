@@ -19,7 +19,9 @@ int main(int argc, char** argv)
 							Vertex(glm::vec3(0.0, 0.5, 0.0),   glm::vec2(0.5, 0.0)),
 							Vertex(glm::vec3(0.5, -0.5, 0.0),  glm::vec2(1.0, 1.0)) };
 
-	Mesh mesh(verticies, sizeof(verticies) / sizeof(verticies[0]));
+	unsigned int indices[] = { 0, 1, 2 };
+
+	Mesh mesh(verticies, sizeof(verticies) / sizeof(verticies[0]), indices, sizeof(indices)/sizeof(indices[0]));
 	Shader shader("./res/basicShader");
 	Texture texture("./res/TriForce.jpg");
 	Transform transform;

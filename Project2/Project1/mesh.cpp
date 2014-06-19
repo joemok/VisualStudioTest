@@ -1,9 +1,10 @@
 #include "mesh.h"
 #include <vector>
 
-Mesh::Mesh(Vertex* vertices, unsigned int numVertices)
+Mesh::Mesh(Vertex* vertices, unsigned int numVertices, unsigned int* indices, unsigned int numIndices)
 {
-	m_drawCount = numVertices;
+	//m_drawCount = numVertices;
+	m_drawCount = numIndices;
 
 	glGenVertexArrays(1, &m_vertexArrayObject);
 	glBindVertexArray(m_vertexArrayObject);
@@ -30,10 +31,18 @@ Mesh::Mesh(Vertex* vertices, unsigned int numVertices)
 	glBindBuffer(GL_ARRAY_BUFFER, m_vertexArrayBuffers[TEXCOORD_VB]);
 	glBufferData(GL_ARRAY_BUFFER, numVertices * sizeof(texCoords[0]), &texCoords[0], GL_STATIC_DRAW);
 
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_vertexArrayBuffers[INDEX_VB]);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, numIndices * sizeof(indices[0]), indices, GL_STATIC_DRAW);
+
 	glEnableVertexAttribArray(1);
 	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 0, 0);
 
 	glBindVertexArray(0);
+
+}
+
+Mesh::Mesh(const std::string& fileName)
+{
 
 }
 
@@ -47,7 +56,8 @@ void Mesh::Draw()
 {
 	glBindVertexArray(m_vertexArrayObject);
 
-	glDrawArrays(GL_TRIANGLES, 0, m_drawCount);
+	glDrawElements(GL_TRIANGLES, m_drawCount, GL_UNSIGNED_INT, 0);
+	//glDrawArrays(GL_TRIANGLES, 0, m_drawCount);
 
 	glBindVertexArray(0);
 }
