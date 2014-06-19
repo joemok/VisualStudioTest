@@ -21,7 +21,7 @@ int main(int argc, char** argv)
 
 	Mesh mesh(vertices, sizeof(vertices) / sizeof(vertices[0]));
 	Shader shader("./res/basicShader");
-	Texture texture("./res/bricks.jpg");
+	Texture texture("./res/Luigi.jpg");
 	Camera camera(glm::vec3(0, 0, -2), 70.0f, (float)WIDTH / (float)HEIGHT, 0.01f, 1000.0f);
 	Transform transform;
 

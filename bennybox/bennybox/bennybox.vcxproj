@@ -36,7 +36,7 @@
     <None Include="res\basicShader.vs" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\bricks.jpg" />
+    <Image Include="res\Luigi.jpg" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9D80100C-CD3A-4261-9FBF-A293CF54CCB5}</ProjectGuid>
