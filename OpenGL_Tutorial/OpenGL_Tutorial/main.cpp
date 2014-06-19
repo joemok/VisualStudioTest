@@ -7,8 +7,8 @@
 #include "transform.h"
 #include "camera.h"
 
-static const int DISPLAY_WIDTH = 800;
-static const int DISPLAY_HEIGHT = 600;
+static const int DISPLAY_WIDTH = 1600;
+static const int DISPLAY_HEIGHT = 900;
 
 int main(int argc, char** argv)
 { 
@@ -66,12 +66,17 @@ int main(int argc, char** argv)
 							  23, 22, 20
 	                          };
 
-	Mesh mesh(vertices, sizeof(vertices)/sizeof(vertices[0]), indices, sizeof(indices)/sizeof(indices[0]));
-	Mesh monkey("./res/monkey3.obj");
+	//Mesh mesh(vertices, sizeof(vertices)/sizeof(vertices[0]), indices, sizeof(indices)/sizeof(indices[0]));
+	//Mesh monkey("./res/monkey3.obj");
+	Mesh lamp("./res/lamp.obj");
+	//Mesh mario("./res/mario_obj.obj");
+	//Mesh airboat("./res/airboat.obj");
+	//Mesh cessna("./res/cessna.obj");
+	//Mesh pl("./res/power_lines.obj");
 	Shader shader("./res/basicShader");
 	Texture texture("./res/bricks.jpg");
 	Transform transform;
-	Camera camera(glm::vec3(0.0f, 0.0f, -5.0f), 70.0f, (float)DISPLAY_WIDTH/(float)DISPLAY_HEIGHT, 0.1f, 100.0f);
+	Camera camera(glm::vec3(0.0f, 2.0f, -10.0f), 70.0f, (float)DISPLAY_WIDTH/(float)DISPLAY_HEIGHT, 0.1f, 100.0f);
 
 	SDL_Event e;
 	bool isRunning = true;
@@ -89,16 +94,21 @@ int main(int argc, char** argv)
 		float sinCounter = sinf(counter);
 		float absSinCounter = abs(sinCounter);
 
-		transform.GetPos()->x = sinCounter;
+		//transform.GetPos()->x = sinCounter;
 		transform.GetRot()->y = counter * 100;
-		transform.GetRot()->z = counter * 100;
+		//transform.GetRot()->z = counter * 100;
 		//transform.GetScale()->x = absSinCounter;
 		//transform.GetScale()->y = absSinCounter;
 
+		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //Turn on wireframe mode
+		glEnable(GL_POLYGON_OFFSET_FILL);
+		glPolygonOffset(0.85, 0.85);
+
 		shader.Bind();
-		texture.Bind();
+		//texture.Bind();
 		shader.Update(transform, camera);
-		monkey.Draw();
+		lamp.Draw();
+		//monkey.Draw();
 		//mesh.Draw();
 
 		display.SwapBuffers();
