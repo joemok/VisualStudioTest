@@ -9,8 +9,6 @@ public:
 
 	void Bind(unsigned int unit); // unit is the index of textures, there can be 0-31 kinds
 
-
-
 	~Texture();
 
 

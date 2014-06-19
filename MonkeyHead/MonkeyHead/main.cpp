@@ -5,7 +5,7 @@
 #include "Shader.h"
 #include "Texture.h"
 #include "Mesh.h"
-
+#include "Transform.h"
 
 static const int DISPLAY_WIDTH = 800;
 static const int DISPLAY_HEIGHT = 600;
@@ -22,14 +22,26 @@ int main(int argc, char** argv)
 	Mesh mesh(vertices, sizeof(vertices) / sizeof(vertices[0]));
 	Shader shader("./res/basicShader");
 	Texture texture("./res/bricks.jpg");
+	Transform transform;
+
+	float counter = 0.0f;
+
+
 	while (!display.isClosed()){
 
 		display.Clear(0.8f, 0.4f, 0.4f, 0.8f);
+
+		
+
+		transform.GetPos().x = sinf(counter);
+
 		shader.Bind();
+		shader.Update(transform);
 		texture.Bind(0);
 		mesh.Draw();
 
 		display.swapBuffers();
+		counter += 0.1f;
 	}
 
 	std::cin.get();
