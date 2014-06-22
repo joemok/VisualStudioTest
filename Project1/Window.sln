@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VS_Test", "Project1\Project1.vcxproj", "{A1EDAD14-C2E2-4064-99EC-7100C0E2C7DA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{06BCF993-6FAE-441E-B98E-D616E9F13968} = {06BCF993-6FAE-441E-B98E-D616E9F13968}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SDL_test", "SDL_test\SDL_test.vcxproj", "{06BCF993-6FAE-441E-B98E-D616E9F13968}"
 EndProject
