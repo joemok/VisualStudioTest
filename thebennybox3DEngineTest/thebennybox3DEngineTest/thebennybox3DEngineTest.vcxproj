@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4E642507-6024-491A-A725-740FCB340DFF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>thebennybox3DEngineTest</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;glew32.lib;glew32s.lib;glu32.lib;opengl32.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\3DEngine.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\camera.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\coreEngine.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\freeLook.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\freeMove.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\game.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\gameComponent.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\gameObject.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\input.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\lighting.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\mappedValues.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\material.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\math3d.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\mesh.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\meshRenderer.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\profiling.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\referenceCounter.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\renderingEngine.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\shader.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\simdaccel.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\simddefines.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\simdemulator.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\stb_image.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\texture.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\timing.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\transform.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\util.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\window.h" />
+    <ClInclude Include="..\..\..\..\3DEngineCpp-thebennybox\src\x86simdaccel.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\camera.cpp" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\coreEngine.cpp" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\freeLook.cpp" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\freeMove.cpp" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\game.cpp" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\gameObject.cpp" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\input.cpp" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\lighting.cpp" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\main.cpp" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\mappedValues.cpp" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\material.cpp" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\math3d.cpp" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\mesh.cpp" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\profiling.cpp" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\renderingEngine.cpp" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\shader.cpp" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\stb_image.c" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\texture.cpp" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\timing.cpp" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\transform.cpp" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\util.cpp" />
+    <ClCompile Include="..\..\..\..\3DEngineCpp-thebennybox\src\window.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

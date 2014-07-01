@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3DGmeEngineTest", "3DGmeEngineTest\3DGmeEngineTest.vcxproj", "{EC8E148E-EC63-4A6A-AF39-F166DFCC9DE9}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "thebennybox3DEngineTest", "thebennybox3DEngineTest\thebennybox3DEngineTest.vcxproj", "{4E642507-6024-491A-A725-740FCB340DFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EC8E148E-EC63-4A6A-AF39-F166DFCC9DE9}.Debug|Win32.ActiveCfg = Debug|Win32
-		{EC8E148E-EC63-4A6A-AF39-F166DFCC9DE9}.Debug|Win32.Build.0 = Debug|Win32
-		{EC8E148E-EC63-4A6A-AF39-F166DFCC9DE9}.Release|Win32.ActiveCfg = Release|Win32
-		{EC8E148E-EC63-4A6A-AF39-F166DFCC9DE9}.Release|Win32.Build.0 = Release|Win32
+		{4E642507-6024-491A-A725-740FCB340DFF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4E642507-6024-491A-A725-740FCB340DFF}.Debug|Win32.Build.0 = Debug|Win32
+		{4E642507-6024-491A-A725-740FCB340DFF}.Release|Win32.ActiveCfg = Release|Win32
+		{4E642507-6024-491A-A725-740FCB340DFF}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

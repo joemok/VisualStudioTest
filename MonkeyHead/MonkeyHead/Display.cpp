@@ -22,7 +22,7 @@ Display::Display(int width, int height, const std::string& title)
 
 	if (status != GLEW_OK){
 
-		std::cerr << "Glew failed" << std::endl;
+		std::cerr << "Glew failed" << std::endl;  
 
 	}
 
