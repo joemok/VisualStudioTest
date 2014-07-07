@@ -27,6 +27,10 @@
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Transform.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="res\basicShader.fs" />
+    <None Include="res\basicShader.vs" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{F1F5FCEE-7528-4EFC-95C3-1F2DB01714A1}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
